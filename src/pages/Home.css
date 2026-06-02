@@ -1,0 +1,59 @@
+/* Home.css */
+.home { font-family: 'Inter', sans-serif; }
+.section { padding: 4rem 1.5rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-title { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: #1C1C1C; margin-bottom: 2rem; }
+
+/* categories */
+.categories-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+.category-card {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 1.2rem 0.5rem;
+  background: #F9F9F9; border-radius: 16px; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.category-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+.cat-emoji { font-size: 2.2rem; }
+.category-card span { font-size: 0.85rem; font-weight: 600; color: #3D3D3D; }
+
+/* why section */
+.why-section { background: #FFF8F5; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.why-card {
+  background: #fff; border-radius: 16px; padding: 2rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+.why-card:hover { transform: translateY(-4px); }
+.why-icon { font-size: 2rem; margin-bottom: 1rem; }
+.why-card h3 { font-size: 1.1rem; font-weight: 700; color: #1C1C1C; margin-bottom: 0.5rem; }
+.why-card p { font-size: 0.9rem; color: #6B6B6B; line-height: 1.6; }
+
+/* CTA */
+.cta-banner { background: linear-gradient(135deg, #FC5A03, #FF8C42); padding: 5rem 1.5rem; text-align: center; }
+.cta-inner { max-width: 600px; margin: 0 auto; }
+.cta-banner h2 { font-size: 2.5rem; font-weight: 900; color: #fff; margin-bottom: 0.75rem; }
+.cta-banner p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 2rem; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-primary {
+  background: #fff; color: #FC5A03; border: none;
+  padding: 14px 32px; border-radius: 12px; font-size: 1rem; font-weight: 700;
+  cursor: pointer; transition: transform 0.2s;
+}
+.cta-primary:hover { transform: translateY(-2px); }
+.cta-secondary {
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,0.7);
+  padding: 14px 32px; border-radius: 12px; font-size: 1rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.cta-secondary:hover { background: rgba(255,255,255,0.1); }
+
+@media (max-width: 768px) {
+  .categories-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+}
