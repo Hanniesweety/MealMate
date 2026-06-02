@@ -1,0 +1,21 @@
+/* Footer.css */
+.footer { background: #1C1C1C; color: #ccc; padding: 4rem 1.5rem 1.5rem; margin-top: 4rem; }
+.footer-container {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #333;
+}
+.footer-logo { font-size: 1.4rem; font-weight: 800; color: #FC5A03; margin-bottom: 0.75rem; }
+.footer-brand p { font-size: 0.9rem; line-height: 1.7; color: #999; max-width: 240px; }
+.footer-socials { display: flex; gap: 12px; margin-top: 1rem; font-size: 1.4rem; cursor: pointer; }
+.footer-links h4 { color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; }
+.footer-links a { display: block; color: #999; text-decoration: none; font-size: 0.88rem; margin-bottom: 0.6rem; transition: color 0.2s; }
+.footer-links a:hover { color: #FC5A03; }
+.footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; text-align: center; font-size: 0.85rem; color: #555; }
+@media (max-width: 768px) {
+  .footer-container { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .footer-container { grid-template-columns: 1fr; }
+}
