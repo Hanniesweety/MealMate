@@ -1,0 +1,39 @@
+.dineout-page { min-height: 100vh; background: var(--beige); }
+.dineout-hero { background: linear-gradient(135deg, #3D1F0A, #7A3A10); padding: 5rem 1.5rem; text-align: center; }
+.dineout-hero-inner { max-width: 700px; margin: 0 auto; }
+.dineout-badge { display: inline-block; background: rgba(255,255,255,0.1); color: #EDD9BC; font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-bottom: 1.2rem; }
+.dineout-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; color: #FDF6EE; line-height: 1.2; margin-bottom: 1rem; }
+.dineout-hero h1 span { color: #D2691E; }
+.dineout-hero p { color: rgba(253,246,238,0.75); font-size: 1rem; margin-bottom: 2rem; line-height: 1.7; }
+.dineout-search { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 14px 20px; max-width: 500px; margin: 0 auto; }
+.dineout-search input { flex: 1; background: transparent; border: none; outline: none; color: #FDF6EE; font-size: 0.95rem; }
+.dineout-search input::placeholder { color: rgba(253,246,238,0.5); }
+.dineout-filters { background: #fff; border-bottom: 1px solid #EDD9BC; padding: 1rem 1.5rem; position: sticky; top: 64px; z-index: 50; }
+.filters-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.filter-btn { padding: 8px 20px; border-radius: 20px; border: 2px solid #EDD9BC; background: transparent; color: #6B4423; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.filter-btn:hover { border-color: #8B4513; color: #8B4513; }
+.filter-btn.active { background: #8B4513; color: #fff; border-color: #8B4513; }
+.dineout-container { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.dineout-count { font-size: 0.9rem; color: #8A6A50; margin-bottom: 1.5rem; font-weight: 500; }
+.dineout-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+.dineout-card { background: #fff; border-radius: 18px; overflow: hidden; border: 1px solid #EDD9BC; box-shadow: 0 4px 16px rgba(139,69,19,0.08); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.dineout-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(139,69,19,0.15); }
+.dineout-card-img { height: 180px; background: linear-gradient(135deg, #F5E6D3, #EDD9BC); display: flex; align-items: center; justify-content: center; position: relative; }
+.dineout-emoji { font-size: 5rem; }
+.dineout-type-badge { position: absolute; top: 12px; left: 12px; background: #8B4513; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.closed-badge { position: absolute; top: 12px; right: 12px; background: #DC2626; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.dineout-card-body { padding: 1.2rem 1.5rem; }
+.dineout-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.dineout-card-top h3 { font-size: 1.05rem; font-weight: 700; color: #2C1810; }
+.dineout-rating { background: #F5E6D3; color: #8B4513; font-size: 0.82rem; font-weight: 700; padding: 4px 10px; border-radius: 8px; }
+.dineout-cuisine { font-size: 0.85rem; color: #8A6A50; margin-bottom: 0.75rem; }
+.dineout-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.75rem; }
+.tag { background: #F5E6D3; color: #6B4423; font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+.dineout-meta { display: flex; gap: 1rem; font-size: 0.82rem; color: #A0704A; margin-bottom: 1rem; }
+.dineout-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.view-menu-btn { padding: 10px; background: transparent; border: 2px solid #8B4513; color: #8B4513; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.view-menu-btn:hover { background: #8B4513; color: #fff; }
+.book-table-btn { padding: 10px; background: #8B4513; color: #fff; border: none; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: background 0.2s; }
+.book-table-btn:hover:not(:disabled) { background: #6B3410; }
+.book-table-btn:disabled { background: #C4A882; cursor: not-allowed; }
+@media (max-width: 768px) { .dineout-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,66 @@
+.restaurants-page { min-height: 100vh; background: var(--beige); }
+.restaurants-container { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
+.restaurants-header { margin-bottom: 2rem; }
+.restaurants-header h1 { font-size: 2rem; font-weight: 800; color: #2C1810; margin-bottom: 0.4rem; }
+.restaurants-header p { color: #8A6A50; }
+.restaurants-search { margin-bottom: 2.5rem; }
+.restaurants-search input {
+  width: 100%; max-width: 480px;
+  padding: 14px 20px; border: 2px solid #EDD9BC;
+  border-radius: 12px; font-size: 0.95rem;
+  background: #fff; color: #2C1810; outline: none;
+  transition: border 0.2s;
+}
+.restaurants-search input:focus { border-color: #8B4513; }
+.restaurants-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.restaurant-card {
+  background: #fff; border-radius: 16px;
+  overflow: hidden; border: 1px solid #EDD9BC;
+  box-shadow: 0 4px 16px rgba(139,69,19,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(139,69,19,0.15);
+}
+.card-image {
+  height: 160px; background: linear-gradient(135deg, #F5E6D3, #EDD9BC);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.card-emoji { font-size: 5rem; }
+.card-badge {
+  position: absolute; top: 12px; right: 12px;
+  background: #fff; color: #2C1810;
+  font-size: 0.8rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.card-body { padding: 1.2rem; }
+.card-body h3 { font-size: 1.1rem; font-weight: 700; color: #2C1810; margin-bottom: 4px; }
+.cuisine { font-size: 0.85rem; color: #8A6A50; margin-bottom: 0.75rem; }
+.card-meta { display: flex; gap: 1rem; font-size: 0.82rem; color: #A0704A; margin-bottom: 1rem; }
+.order-btn {
+  width: 100%; padding: 10px;
+  background: #8B4513; color: #fff; border: none;
+  border-radius: 10px; font-size: 0.9rem; font-weight: 700;
+  transition: background 0.2s;
+}
+.order-btn:hover { background: #6B3410; }
+
+/* skeleton loading */
+.loading-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.skeleton-card {
+  height: 320px; background: linear-gradient(90deg, #F5E6D3 25%, #EDD9BC 50%, #F5E6D3 75%);
+  background-size: 200% 100%;
+  border-radius: 16px;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+@media (max-width: 768px) {
+  .restaurants-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .restaurants-grid { grid-template-columns: 1fr; }
+}

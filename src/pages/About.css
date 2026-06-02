@@ -1,0 +1,29 @@
+.about-page { min-height: 100vh; background: var(--beige); }
+.about-hero { background: linear-gradient(135deg, #2C1810, #6B3410); padding: 6rem 1.5rem; text-align: center; }
+.about-hero-inner { max-width: 700px; margin: 0 auto; }
+.about-badge { display: inline-block; background: rgba(255,255,255,0.1); color: #EDD9BC; font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-bottom: 1.2rem; }
+.about-hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: #FDF6EE; line-height: 1.2; margin-bottom: 1rem; }
+.about-hero h1 span { color: #D2691E; }
+.about-hero p { color: rgba(253,246,238,0.75); font-size: 1.05rem; line-height: 1.8; }
+.about-stats-section { background: #fff; border-bottom: 1px solid #EDD9BC; }
+.about-stats-inner { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; text-align: center; }
+.about-stat strong { display: block; font-size: 2rem; font-weight: 900; color: #8B4513; }
+.about-stat span { font-size: 0.85rem; color: #8A6A50; }
+.about-mission { padding: 5rem 1.5rem; }
+.about-mission-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.mission-text h2 { font-size: 2rem; font-weight: 800; color: #2C1810; margin-bottom: 1rem; }
+.mission-text p { color: #8A6A50; line-height: 1.8; margin-bottom: 1.5rem; }
+.mission-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.mission-list li { font-size: 0.95rem; color: #6B4423; font-weight: 500; }
+.mission-visual { display: flex; justify-content: center; }
+.mission-circle { width: 240px; height: 240px; background: linear-gradient(135deg, #F5E6D3, #EDD9BC); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 7rem; }
+.about-team { background: #F5E6D3; padding: 5rem 1.5rem; }
+.about-team-inner { max-width: 900px; margin: 0 auto; }
+.about-team h2 { font-size: 2rem; font-weight: 800; color: #2C1810; margin-bottom: 2rem; text-align: center; }
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.team-card { background: #fff; border-radius: 16px; padding: 2rem 1rem; text-align: center; border: 1px solid #EDD9BC; transition: transform 0.2s; }
+.team-card:hover { transform: translateY(-4px); }
+.team-avatar { font-size: 3rem; margin-bottom: 1rem; }
+.team-card h3 { font-size: 1rem; font-weight: 700; color: #2C1810; margin-bottom: 4px; }
+.team-card p { font-size: 0.82rem; color: #8A6A50; }
+@media (max-width: 768px) { .about-stats-inner { grid-template-columns: repeat(2,1fr); } .about-mission-inner { grid-template-columns: 1fr; } .team-grid { grid-template-columns: repeat(2,1fr); } }

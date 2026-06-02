@@ -1,15 +1,44 @@
+// Hero.jsx-la Order Now button-a Restaurants page-ku link pann
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
   const [location, setLocation] = useState("");
+  const [locating, setLocating] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = () => {
     if (location.trim()) {
       navigate(`/restaurants?location=${location}`);
+    } else {
+      alert("Please enter your location!");
     }
+  };
+
+  // GPS location detect pann
+  const handleGPS = () => {
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        const { latitude, longitude } = pos.coords;
+        try {
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+          );
+          const data = await res.json();
+          const area = data.address.suburb || data.address.city || data.address.town || "Your Location";
+          setLocation(area);
+        } catch {
+          setLocation(`${latitude.toFixed(3)}, ${longitude.toFixed(3)}`);
+        }
+        setLocating(false);
+      },
+      () => {
+        alert("Location access denied!");
+        setLocating(false);
+      }
+    );
   };
 
   return (
@@ -35,6 +64,14 @@ const Hero = () => {
               onChange={(e) => setLocation(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
+            {/* GPS button */}
+            <button
+              className="gps-btn"
+              onClick={handleGPS}
+              title="Use my location"
+            >
+              {locating ? "⏳" : "🎯"}
+            </button>
           </div>
           <button className="search-btn" onClick={handleSearch}>
             Find Food
@@ -42,20 +79,11 @@ const Hero = () => {
         </div>
 
         <div className="hero-stats">
-          <div className="stat">
-            <strong>500+</strong>
-            <span>Restaurants</span>
-          </div>
+          <div className="stat"><strong>500+</strong><span>Restaurants</span></div>
           <div className="stat-divider" />
-          <div className="stat">
-            <strong>30 min</strong>
-            <span>Avg Delivery</span>
-          </div>
+          <div className="stat"><strong>30 min</strong><span>Avg Delivery</span></div>
           <div className="stat-divider" />
-          <div className="stat">
-            <strong>50k+</strong>
-            <span>Happy Users</span>
-          </div>
+          <div className="stat"><strong>50k+</strong><span>Happy Users</span></div>
         </div>
       </div>
 

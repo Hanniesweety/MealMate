@@ -48,3 +48,27 @@
   }
   .navbar-links.open { display: flex; }
 }
+
+.btn-profile {
+  color: #6B4423 !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 2px solid #8B4513;
+  color: #8B4513;
+  padding: 6px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-logout:hover {
+  background: #8B4513;
+  color: #fff;
+}

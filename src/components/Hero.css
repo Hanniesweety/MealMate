@@ -74,3 +74,13 @@
   .hero-stats { justify-content: center; }
   .hero-subtitle { margin: 0 auto 2rem; }
 }
+.gps-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.gps-btn:hover { background: #EDD9BC; }

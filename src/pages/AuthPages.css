@@ -1,0 +1,49 @@
+.auth-page { min-height: 100vh; background: var(--beige); }
+.auth-container {
+  display: flex; align-items: center; justify-content: center;
+  min-height: calc(100vh - 64px); padding: 2rem 1.5rem;
+}
+.auth-card {
+  background: #fff; border-radius: 20px;
+  padding: 2.5rem; width: 100%; max-width: 440px;
+  box-shadow: 0 8px 40px rgba(139,69,19,0.12);
+  border: 1px solid #EDD9BC;
+}
+.auth-header { text-align: center; margin-bottom: 2rem; }
+.auth-logo { font-size: 3rem; margin-bottom: 0.75rem; }
+.auth-header h2 { font-size: 1.8rem; font-weight: 800; color: #2C1810; margin-bottom: 0.4rem; }
+.auth-header p { color: #8A6A50; font-size: 0.95rem; }
+.auth-error {
+  background: #FEF2F2; color: #DC2626;
+  border: 1px solid #FECACA; border-radius: 10px;
+  padding: 10px 14px; font-size: 0.88rem; margin-bottom: 1rem;
+}
+.auth-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.88rem; font-weight: 600; color: #6B4423; }
+.form-group input {
+  padding: 12px 16px; border: 2px solid #EDD9BC;
+  border-radius: 10px; font-size: 0.95rem;
+  background: #FDF6EE; color: #2C1810;
+  transition: border 0.2s; outline: none;
+}
+.form-group input:focus { border-color: #8B4513; background: #fff; }
+.auth-forgot { text-align: right; margin-top: -8px; }
+.auth-forgot a { font-size: 0.85rem; color: #8B4513; font-weight: 500; }
+.auth-btn {
+  width: 100%; padding: 14px;
+  background: #8B4513; color: #fff;
+  border: none; border-radius: 12px;
+  font-size: 1rem; font-weight: 700;
+  transition: background 0.2s, transform 0.1s; margin-top: 0.5rem;
+}
+.auth-btn:hover { background: #6B3410; transform: translateY(-1px); }
+.auth-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 1.5rem 0; color: #A0704A; font-size: 0.85rem;
+}
+.auth-divider::before,.auth-divider::after {
+  content: ''; flex: 1; height: 1px; background: #EDD9BC;
+}
+.auth-switch { text-align: center; font-size: 0.9rem; color: #8A6A50; }
+.auth-switch a { color: #8B4513; font-weight: 700; }
