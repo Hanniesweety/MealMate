@@ -1,0 +1,50 @@
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: #FDF6EE;
+  box-shadow: 0 2px 12px rgba(139,69,19,0.1);
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #EDD9BC;
+}
+.navbar-container {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between; height: 64px;
+}
+.navbar-logo {
+  font-size: 1.5rem; font-weight: 800;
+  color: #8B4513; text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.navbar-logo span { color: #2C1810; }
+.navbar-links { display: flex; align-items: center; gap: 1.8rem; }
+.navbar-links a {
+  text-decoration: none; color: #6B4423;
+  font-weight: 500; font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.navbar-links a:hover { color: #8B4513; }
+.btn-login {
+  border: 2px solid #8B4513 !important;
+  color: #8B4513 !important;
+  padding: 6px 18px; border-radius: 8px;
+}
+.btn-login:hover { background: #8B4513; color: #fff !important; }
+.btn-signup {
+  background: #8B4513; color: #fff !important;
+  padding: 8px 20px; border-radius: 8px;
+  transition: background 0.2s;
+}
+.btn-signup:hover { background: #6B3410; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 24px; height: 2px; background: #2C1810; border-radius: 2px; }
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .navbar-links {
+    display: none; position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: #FDF6EE; flex-direction: column;
+    padding: 1.5rem; box-shadow: 0 8px 24px rgba(139,69,19,0.1);
+    gap: 1rem;
+  }
+  .navbar-links.open { display: flex; }
+}
