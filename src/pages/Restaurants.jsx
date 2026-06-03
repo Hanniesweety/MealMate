@@ -82,6 +82,12 @@ const navigate = useNavigate();
                   <div className="card-meta">
                     <span>🕐 {r.deliveryTime} min</span>
                     <span>💰 ₹{r.priceForTwo} for two</span>
+                    <button
+  className="order-btn"
+  onClick={() => navigate(`/restaurant/${r._id}`)}
+>
+  View Menu
+</button>
                   </div>
                   <button className="order-btn">Order Now</button>
                 </div>

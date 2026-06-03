@@ -11,6 +11,7 @@ import About from "./pages/About";
 import OrderNow from "./pages/OrderNow";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
+import OrderTracking from "./pages/OrderTracking";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
         <Route path="/table-booking/:id" element={<ProtectedRoute><TableBooking /></ProtectedRoute>} />
         <Route path="/order/:id" element={<ProtectedRoute><OrderNow /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/order-tracking" element={
+  <ProtectedRoute><OrderTracking /></ProtectedRoute>
+} />
       </Routes>
     </BrowserRouter>
   );

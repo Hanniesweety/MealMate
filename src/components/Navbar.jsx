@@ -26,6 +26,9 @@ const Navbar = () => {
           <Link to="/about">About</Link>
           {isLoggedIn ? (
             <>
+            <Link to="/cart" className="cart-icon">
+  🛒 Cart
+</Link>
               <Link to="/profile" className="btn-profile">👤 Profile</Link>
               <button className="btn-logout" onClick={handleLogout}>Logout</button>
             </>
@@ -34,6 +37,7 @@ const Navbar = () => {
               <Link to="/login" className="btn-login">Login</Link>
               <Link to="/register" className="btn-signup">Sign Up</Link>
             </>
+            
           )}
         </div>
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
