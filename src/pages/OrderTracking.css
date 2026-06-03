@@ -1,0 +1,43 @@
+.ot-page { min-height: 100vh; background: var(--beige); }
+.ot-container { max-width: 680px; margin: 0 auto; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; gap: 1.2rem; }
+.ot-header { display: flex; justify-content: space-between; align-items: center; }
+.ot-header h2 { font-size: 1.5rem; font-weight: 800; color: #2C1810; }
+.ot-order-id { font-size: 0.85rem; color: #8A6A50; margin-top: 4px; }
+.ot-eta { text-align: center; background: #8B4513; color: #fff; border-radius: 16px; padding: 12px 20px; }
+.ot-eta-num { font-size: 2rem; font-weight: 900; line-height: 1; }
+.ot-eta-label { font-size: 0.75rem; opacity: 0.85; }
+.ot-tracker-card { background: #fff; border-radius: 20px; padding: 2rem; border: 1px solid #EDD9BC; box-shadow: 0 4px 16px rgba(139,69,19,0.08); }
+.ot-steps { display: flex; flex-direction: column; gap: 0; }
+.ot-step-wrap { display: flex; flex-direction: column; }
+.ot-step { display: flex; align-items: center; gap: 1rem; padding: 0.75rem 0; position: relative; opacity: 0.4; transition: opacity 0.5s; }
+.ot-step.active { opacity: 1; }
+.ot-step-icon { font-size: 1.8rem; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #F5E6D3; border-radius: 50%; flex-shrink: 0; transition: background 0.5s; }
+.ot-step.active .ot-step-icon { background: #8B4513; }
+.ot-step.current .ot-step-icon { background: #8B4513; box-shadow: 0 0 0 6px rgba(139,69,19,0.15); }
+.ot-step-label { font-size: 1rem; font-weight: 700; color: #2C1810; }
+.ot-step-desc { font-size: 0.82rem; color: #8A6A50; margin-top: 2px; }
+.ot-connector { width: 2px; height: 32px; background: #EDD9BC; margin-left: 23px; transition: background 0.5s; }
+.ot-connector.filled { background: #8B4513; }
+.ot-pulse { position: absolute; right: 0; width: 12px; height: 12px; background: #8B4513; border-radius: 50%; animation: pulse 1.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } }
+.ot-rider-card { background: #fff; border-radius: 16px; padding: 1.2rem 1.5rem; border: 1px solid #EDD9BC; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(139,69,19,0.06); }
+.ot-rider-left { display: flex; align-items: center; gap: 12px; }
+.ot-rider-avatar { font-size: 2.5rem; background: #F5E6D3; border-radius: 50%; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; }
+.ot-rider-name { font-size: 1rem; font-weight: 700; color: #2C1810; }
+.ot-rider-sub { font-size: 0.8rem; color: #8A6A50; }
+.ot-call-btn { padding: 10px 20px; background: #8B4513; color: #fff; border: none; border-radius: 10px; font-weight: 600; cursor: pointer; }
+.ot-delivered-card { background: #fff; border-radius: 20px; padding: 2rem; text-align: center; border: 1px solid #EDD9BC; }
+.ot-delivered-icon { font-size: 4rem; margin-bottom: 0.75rem; }
+.ot-delivered-card h3 { font-size: 1.4rem; font-weight: 800; color: #2C1810; margin-bottom: 0.5rem; }
+.ot-delivered-card p { color: #8A6A50; margin-bottom: 1rem; }
+.ot-stars { display: flex; justify-content: center; gap: 8px; margin-bottom: 1.5rem; }
+.ot-star { background: none; border: none; font-size: 1.8rem; cursor: pointer; transition: transform 0.15s; }
+.ot-star:hover { transform: scale(1.2); }
+.ot-reorder-btn { padding: 12px 28px; background: #8B4513; color: #fff; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; font-size: 0.95rem; }
+.ot-summary-card { background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid #EDD9BC; }
+.ot-summary-card h3 { font-size: 1rem; font-weight: 700; color: #2C1810; margin-bottom: 1rem; }
+.ot-summary-items { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem; }
+.ot-summary-row { display: flex; justify-content: space-between; font-size: 0.88rem; color: #6B4423; }
+.ot-summary-total { display: flex; justify-content: space-between; font-size: 1rem; font-weight: 800; color: #2C1810; border-top: 1px solid #EDD9BC; padding-top: 0.75rem; margin-bottom: 0.75rem; }
+.ot-delivery-addr { font-size: 0.82rem; color: #8A6A50; }
+@media (max-width: 480px) { .ot-container { padding: 1.5rem 1rem; } }
