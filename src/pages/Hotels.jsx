@@ -4,92 +4,40 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./Hotels.css";
 
-export const hotelsData = [
-  {
-    id: "1",
-    name: "The Royal Beige",
-    location: "Anna Nagar, Chennai",
-    rating: 4.9,
-    reviews: 2341,
-    pricePerNight: 4500,
-    image: "🏰",
-    type: "Luxury",
+
+  export const hotelsData = [
+  { id: "1", name: "The Royal Beige", location: "Anna Nagar, Chennai", rating: 4.9, reviews: 2341, pricePerNight: 4500, type: "Luxury", available: true,
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80",
     amenities: ["🏊 Pool", "🍽️ Restaurant", "💆 Spa", "🏋️ Gym", "🅿️ Parking"],
     tags: ["Rooftop Pool", "Fine Dining", "Business Center"],
-    available: true,
-    description: "Experience luxury at its finest with world-class amenities and impeccable service.",
-  },
-  {
-    id: "2",
-    name: "Comfort Inn Express",
-    location: "T Nagar, Chennai",
-    rating: 4.5,
-    reviews: 1120,
-    pricePerNight: 2200,
-    image: "🏨",
-    type: "Business",
+    description: "Experience luxury at its finest with world-class amenities." },
+  { id: "2", name: "Comfort Inn Express", location: "T Nagar, Chennai", rating: 4.5, reviews: 1120, pricePerNight: 2200, type: "Business", available: true,
+    image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80",
     amenities: ["📶 Free WiFi", "🍳 Breakfast", "🅿️ Parking", "🏋️ Gym"],
     tags: ["Free Breakfast", "Airport Shuttle", "Meeting Rooms"],
-    available: true,
-    description: "Perfect for business travelers with modern amenities and central location.",
-  },
-  {
-    id: "3",
-    name: "Seaside Serenity Resort",
-    location: "ECR, Chennai",
-    rating: 4.8,
-    reviews: 1876,
-    pricePerNight: 6800,
-    image: "🌴",
-    type: "Resort",
+    description: "Perfect for business travelers with modern amenities." },
+  { id: "3", name: "Seaside Serenity Resort", location: "ECR, Chennai", rating: 4.8, reviews: 1876, pricePerNight: 6800, type: "Resort", available: true,
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80",
     amenities: ["🏖️ Beach Access", "🏊 Pool", "🍽️ Restaurant", "🤿 Water Sports", "💆 Spa"],
     tags: ["Beachfront", "Water Sports", "Sunset Views"],
-    available: true,
-    description: "Escape to paradise with stunning ocean views and world-class resort facilities.",
-  },
-  {
-    id: "4",
-    name: "Budget Stay Plus",
-    location: "Tambaram, Chennai",
-    rating: 4.2,
-    reviews: 654,
-    pricePerNight: 1200,
-    image: "🏠",
-    type: "Budget",
+    description: "Escape to paradise with stunning ocean views." },
+  { id: "4", name: "Budget Stay Plus", location: "Tambaram, Chennai", rating: 4.2, reviews: 654, pricePerNight: 1200, type: "Budget", available: true,
+    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80",
     amenities: ["📶 Free WiFi", "🍳 Breakfast", "🅿️ Parking"],
     tags: ["Value for Money", "Clean Rooms", "Near Metro"],
-    available: true,
-    description: "Comfortable and affordable accommodation with all essential amenities.",
-  },
-  {
-    id: "5",
-    name: "Heritage Grand Palace",
-    location: "Mylapore, Chennai",
-    rating: 4.7,
-    reviews: 987,
-    pricePerNight: 5500,
-    image: "🏛️",
-    type: "Luxury",
+    description: "Comfortable and affordable accommodation." },
+  { id: "5", name: "Heritage Grand Palace", location: "Mylapore, Chennai", rating: 4.7, reviews: 987, pricePerNight: 5500, type: "Luxury", available: false,
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=80",
     amenities: ["🏊 Pool", "🍽️ Restaurant", "💆 Spa", "🎭 Cultural Shows", "🅿️ Parking"],
     tags: ["Heritage Property", "Cultural Experience", "Fine Dining"],
-    available: false,
-    description: "Stay in a historic palace and experience the rich culture of Chennai.",
-  },
-  {
-    id: "6",
-    name: "Green Valley Boutique",
-    location: "Adyar, Chennai",
-    rating: 4.6,
-    reviews: 432,
-    pricePerNight: 3200,
-    image: "🌿",
-    type: "Boutique",
+    description: "Stay in a historic palace and experience rich culture." },
+  { id: "6", name: "Green Valley Boutique", location: "Adyar, Chennai", rating: 4.6, reviews: 432, pricePerNight: 3200, type: "Boutique", available: true,
+    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=400&q=80",
     amenities: ["🌿 Garden", "🍽️ Restaurant", "📶 Free WiFi", "🧘 Yoga"],
     tags: ["Eco-Friendly", "Garden View", "Yoga Classes"],
-    available: true,
-    description: "A sustainable boutique hotel surrounded by lush greenery and tranquility.",
-  },
+    description: "A sustainable boutique hotel surrounded by greenery." },
 ];
+
 
 const filters = ["All", "Luxury", "Business", "Resort", "Budget", "Boutique"];
 
@@ -194,6 +142,18 @@ const Hotels = () => {
                   {hotel.tags.map((tag) => (
                     <span key={tag} className="htag">{tag}</span>
                   ))}
+                  <div className="hotel-card-img">
+  <img
+    src={hotel.image}
+    alt={hotel.name}
+    className="hotel-card-photo"
+    onError={(e) => { e.target.style.display = "none"; }}
+  />
+  <div className="hotel-type-badge">{hotel.type}</div>
+  {!hotel.available && <div className="hotel-full-badge">Fully Booked</div>}
+  <div className="hotel-price-badge">₹{hotel.pricePerNight.toLocaleString()}/night</div>
+</div>
+                  
                 </div>
                 <div className="hotel-footer">
                   <div className="hotel-price-info">
