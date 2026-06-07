@@ -4,12 +4,18 @@ import Navbar from "../components/Navbar";
 import "./OrderNow.css";
 
 const menuItems = [
-  { id: 1, name: "Chicken Biryani", price: 220, emoji: "🍛", category: "Main" },
-  { id: 2, name: "Paneer Butter Masala", price: 180, emoji: "🍲", category: "Main" },
-  { id: 3, name: "Garlic Naan", price: 40, emoji: "🫓", category: "Bread" },
-  { id: 4, name: "Mango Lassi", price: 60, emoji: "🥛", category: "Drinks" },
-  { id: 5, name: "Gulab Jamun", price: 80, emoji: "🍮", category: "Dessert" },
-  { id: 6, name: "Veg Fried Rice", price: 160, emoji: "🍚", category: "Main" },
+  { id: 1, name: "Chicken Biryani", price: 220, category: "Main",
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=200&q=80" },
+  { id: 2, name: "Paneer Butter Masala", price: 180, category: "Main",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=200&q=80" },
+  { id: 3, name: "Garlic Naan", price: 40, category: "Bread",
+    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&q=80" },
+  { id: 4, name: "Mango Lassi", price: 60, category: "Drinks",
+    image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&q=80" },
+  { id: 5, name: "Gulab Jamun", price: 80, category: "Dessert",
+    image: "https://images.unsplash.com/photo-1666459340961-3b3a2e1e1c12?w=200&q=80" },
+  { id: 6, name: "Veg Fried Rice", price: 160, category: "Main",
+    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=200&q=80" },
 ];
 
 const OrderNow = () => {
@@ -67,6 +73,7 @@ const OrderNow = () => {
       <div className="order-container">
         <div className="order-menu">
           <h2>Choose Your Items 🍽️</h2>
+          
           <div className="menu-list">
             {menuItems.map((item) => (
               <div className="menu-item" key={item.id}>
