@@ -14,6 +14,8 @@ import About from "./pages/About";
 import OrderNow from "./pages/OrderNow";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
+import OrderTracking from "./pages/OrderTracking";
+import ChatWidget from "./components/ChatWidget";
 
 function App() {
   return (
@@ -23,6 +25,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
+        <Route
+  path="/order-tracking"
+  element={<OrderTracking />}
+/>
         <Route path="/restaurants" element={<ProtectedRoute><Restaurants /></ProtectedRoute>} />
         <Route path="/restaurants/:id" element={<ProtectedRoute><RestaurantDetail /></ProtectedRoute>} />
         <Route path="/dine-out" element={<ProtectedRoute><DineOut /></ProtectedRoute>} />
@@ -33,6 +39,7 @@ function App() {
         <Route path="/order/:id" element={<ProtectedRoute><OrderNow /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Routes>
+       <ChatWidget />
     </BrowserRouter>
   );
 }
