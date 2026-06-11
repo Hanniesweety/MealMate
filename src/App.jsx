@@ -16,6 +16,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
 import OrderTracking from "./pages/OrderTracking";
 import ChatWidget from "./components/ChatWidget";
+import OwnerDashboard from "./pages/OwnerDashboard";
 
 function App() {
   return (
@@ -28,6 +29,14 @@ function App() {
         <Route
   path="/order-tracking"
   element={<OrderTracking />}
+/>
+<Route
+  path="/owner-dashboard"
+  element={
+    <ProtectedRoute>
+      <OwnerDashboard />
+    </ProtectedRoute>
+  }
 />
         <Route path="/restaurants" element={<ProtectedRoute><Restaurants /></ProtectedRoute>} />
         <Route path="/restaurants/:id" element={<ProtectedRoute><RestaurantDetail /></ProtectedRoute>} />
