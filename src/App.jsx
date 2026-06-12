@@ -12,32 +12,23 @@ import RoomBooking from "./pages/RoomBooking";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import OrderNow from "./pages/OrderNow";
+import OrderTracking from "./pages/OrderTracking";
+import OwnerDashboard from "./pages/OwnerDashboard";
+import ChatWidget from "./components/ChatWidget";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
-import OrderTracking from "./pages/OrderTracking";
-import ChatWidget from "./components/ChatWidget";
-import OwnerDashboard from "./pages/OwnerDashboard";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
-        <Route
-  path="/order-tracking"
-  element={<OrderTracking />}
-/>
-<Route
-  path="/owner-dashboard"
-  element={
-    <ProtectedRoute>
-      <OwnerDashboard />
-    </ProtectedRoute>
-  }
-/>
+
+        {/* Protected Routes */}
         <Route path="/restaurants" element={<ProtectedRoute><Restaurants /></ProtectedRoute>} />
         <Route path="/restaurants/:id" element={<ProtectedRoute><RestaurantDetail /></ProtectedRoute>} />
         <Route path="/dine-out" element={<ProtectedRoute><DineOut /></ProtectedRoute>} />
@@ -46,9 +37,16 @@ function App() {
         <Route path="/hotels/:id" element={<ProtectedRoute><HotelDetail /></ProtectedRoute>} />
         <Route path="/room-booking/:hotelId/:roomId" element={<ProtectedRoute><RoomBooking /></ProtectedRoute>} />
         <Route path="/order/:id" element={<ProtectedRoute><OrderNow /></ProtectedRoute>} />
+
+        {/* ✅ Fix — :orderId param add panninom */}
+        <Route path="/order-tracking/:orderId" element={<ProtectedRoute><OrderTracking /></ProtectedRoute>} />
+
+        <Route path="/owner-dashboard" element={<ProtectedRoute><OwnerDashboard /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Routes>
-       <ChatWidget />
+
+      {/* ChatWidget outside Routes — every page-la show aagum */}
+      <ChatWidget />
     </BrowserRouter>
   );
 }

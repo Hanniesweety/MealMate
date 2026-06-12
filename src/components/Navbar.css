@@ -72,3 +72,17 @@
   background: #8B4513;
   color: #fff;
 }
+.btn-dashboard {
+  background: #F5E6D3;
+  color: #8B4513;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-dashboard:hover {
+  background: #8B4513;
+  color: #fff !important;
+}

@@ -4,7 +4,6 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
   const navigate = useNavigate();
   const isLoggedIn = !!localStorage.getItem("token");
 
@@ -27,6 +26,7 @@ const Navbar = () => {
           <Link to="/about">About</Link>
           {isLoggedIn ? (
             <>
+              <Link to="/owner-dashboard" className="btn-dashboard">📊 Dashboard</Link>
               <Link to="/profile" className="btn-profile">👤 Profile</Link>
               <button className="btn-logout" onClick={handleLogout}>Logout</button>
             </>
