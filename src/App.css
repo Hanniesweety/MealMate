@@ -61,3 +61,13 @@
   background: #FC5A03;
   border-radius: 3px;
 }
+#root {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(245, 240, 232, 0.90), rgba(245, 240, 232, 0.90)),
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
